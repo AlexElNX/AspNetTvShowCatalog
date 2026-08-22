@@ -1,0 +1,104 @@
+﻿body {
+    background-color: #141518;
+    color: #e1e3e6;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.bg-custom-navbar {
+    background-color: #1a1c23 !important;
+}
+
+.bg-custom-footer {
+    background-color: #101114 !important;
+}
+
+.header-section {
+    padding-top: 1rem;
+}
+
+.header-divider {
+    height: 4px;
+    width: 80px;
+    background: linear-gradient(90deg, #dc3545, #ff4d5d);
+    border-radius: 2px;
+    margin-top: 15px;
+}
+
+.serial-card {
+    background-color: #1e2026 !important;
+    border: 1px solid #2a2d36 !important;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.serial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6) !important;
+    border-color: #dc3545 !important;
+}
+
+.card-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #0f1012;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.serial-card:hover .card-img-wrapper img {
+    transform: scale(1.04);
+}
+
+.badge-genre {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: rgba(20, 21, 24, 0.88);
+    color: #ff4d5d;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(220, 53, 69, 0.4);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.78rem;
+}
+
+.badge-year {
+    background-color: #2b2e38;
+    color: #e1e3e6;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.creator-text {
+    font-size: 0.82rem;
+    color: #9aa0a6 !important;
+}
+
+.description-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #b0b5bc !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.footer {
+    position: static !important;
+    width: 100%;
+    line-height: normal !important;
+    background-color: #101114 !important;
+    margin-top: 3rem;
+}
