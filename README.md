@@ -9,9 +9,15 @@ A modern web application built with **ASP.NET Core MVC** and **Entity Framework 
 
 ##  Screenshots
 
-![Main Page Header](screenshots/photo_1.png)
-![Main Page Header](screenshots/photo_2.png)
-![Main Page Header](screenshots/photo_3.png)
+![Main Page Header](screenshots/photo1.png)
+![Main Page Header](screenshots/photo2.png)
+![Main Page Header](screenshots/photo3.png)
+![Main Page Header](screenshots/photo4.png)
+![Main Page Header](screenshots/photo5.png)
+![Main Page Header](screenshots/photo6.png)
+![Main Page Header](screenshots/photo7.png)
+![Main Page Header](screenshots/photo8.png)
+
 
 ---
 

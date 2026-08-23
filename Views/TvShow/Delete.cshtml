@@ -1,0 +1,42 @@
+﻿@model TvShow
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<div class="container py-5">
+    <div class="card serial-card p-4 shadow-lg">
+        <div class="row g-4 align-items-center">
+            <div class="col-md-4 text-center">
+                <img src="@Model.Poster" alt="@Model.Title" class="img-fluid rounded-3 shadow" style="max-height: 500px; object-fit: cover;">
+            </div>
+            <div class="col-md-8">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                    <h1 class="display-5 fw-bold text-light mb-0">@Model.Title</h1>
+                    <span class="badge-year fs-6">@Model.Premiere.Year</span>
+                </div>
+
+                <div class="mb-3">
+                    <span class="badge bg-danger text-light px-3 py-2 rounded-pill fs-6">@Model.Genre</span>
+                </div>
+
+                <p class="creator-text fs-5 mb-3">
+                    Showrunner: <span class="text-light fw-semibold">@Model.Showrunner</span>
+                </p>
+
+                <p class="text-secondary fs-6 mb-4" style="line-height: 1.7;">
+                    @Model.Description
+                </p>
+
+                <div class="pt-3 border-top border-secondary border-opacity-25 d-flex gap-3">
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <input type="submit" value="Delete" class="btn btn-danger" /> |
+                        <a asp-action="Index" class="btn btn-outline-light px-4">Back to List</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

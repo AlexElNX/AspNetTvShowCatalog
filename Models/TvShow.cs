@@ -9,9 +9,5 @@
         public DateOnly Premiere { get; set; }
         public string? Poster { get; set; }
         public string? Description { get; set; }
-
-
-
-
     }
 }
