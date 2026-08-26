@@ -7,9 +7,12 @@ namespace TVShowCatalog.Controllers
     public class TvShowController : Controller
     {
         private readonly TvShowContext _context;
-        public TvShowController(TvShowContext context)
+        private readonly IWebHostEnvironment _webHostEnvironment;
+
+        public TvShowController(TvShowContext context, IWebHostEnvironment webHostEnvironment)
         {
             _context = context;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         // GET: TvShows
@@ -20,7 +23,6 @@ namespace TVShowCatalog.Controllers
 
 
         // GET: TvShows/Details
-
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null) return NotFound();
@@ -44,8 +46,25 @@ namespace TVShowCatalog.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Showrunner,Genre,Premiere,Poster,Description")] TvShow tvShow)
+        public async Task<IActionResult> Create([Bind("Id,Title,Showrunner,Genre,Premiere,Poster,Description")] TvShow tvShow, IFormFile? posterFile)
         {
+            if (posterFile != null && posterFile.Length > 0)
+            {
+                string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images");
+                Directory.CreateDirectory(uploadsFolder);
+
+                string fileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(posterFile.FileName);
+                string filePath = Path.Combine(uploadsFolder, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await posterFile.CopyToAsync(stream);
+                }
+
+                tvShow.Poster = "/images/" + fileName;
+            }
+
+
             if (ModelState.IsValid)
             {
                 _context.Add(tvShow);
@@ -73,9 +92,28 @@ namespace TVShowCatalog.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Showrunner,Genre,Premiere,Poster,Description")] TvShow tvShow)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Showrunner,Genre,Premiere,Poster,Description")] TvShow tvShow, IFormFile? posterFile)
         {
             if (id != tvShow.Id) return NotFound();
+
+
+            if (posterFile != null && posterFile.Length > 0)
+            {
+                string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images");
+                Directory.CreateDirectory(uploadsFolder);
+
+                string fileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(posterFile.FileName);
+                string filePath = Path.Combine(uploadsFolder, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await posterFile.CopyToAsync(stream);
+                }
+
+                tvShow.Poster = "/images/" + fileName;
+            }
+
+
 
             if (ModelState.IsValid)
             {
@@ -125,9 +163,9 @@ namespace TVShowCatalog.Controllers
             if(tvShow != null)
             {
                 _context.TvShows.Remove(tvShow);
+                await _context.SaveChangesAsync();
             }
 
-            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 

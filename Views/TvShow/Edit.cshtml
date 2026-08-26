@@ -11,7 +11,7 @@
                 <h2 class="text-light fw-bold mb-3">Edit TV Show</h2>
                 <div class="header-divider mb-4"></div>
 
-                <form asp-action="Edit">
+                <form asp-action="Edit" enctype="multipart/form-data">
                     <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
                     <input type="hidden" asp-for="Id" />
 
@@ -41,9 +41,8 @@
                     </div>
 
                     <div class="mb-3">
-                        <label asp-for="Poster" class="form-label text-light fw-semibold">Poster URL / Path</label>
-                        <input asp-for="Poster" class="form-control bg-dark text-light border-secondary" />
-                        <span asp-validation-for="Poster" class="text-danger small"></span>
+                        <label class="form-label text-light fw-semibold">New Poster Image (Optional)</label>
+                        <input type="file" name="posterFile" accept="image/*" class="form-control bg-dark text-light border-secondary" />
                     </div>
 
                     <div class="mb-4">
