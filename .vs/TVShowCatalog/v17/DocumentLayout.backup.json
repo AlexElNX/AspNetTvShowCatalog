@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "D:\\Programming\\ASP .NET\\TVShowCatalog\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|d:\\programming\\asp .net\\tvshowcatalog\\views\\tvshow\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|solutionrelative:views\\tvshow\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|d:\\programming\\asp .net\\tvshowcatalog\\models\\tvshow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|solutionrelative:models\\tvshow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|d:\\programming\\asp .net\\tvshowcatalog\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|d:\\programming\\asp .net\\tvshowcatalog\\controllers\\tvshowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|solutionrelative:controllers\\tvshowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|d:\\programming\\asp .net\\tvshowcatalog\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|d:\\programming\\asp .net\\tvshowcatalog\\validationattributes\\maxyearattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|solutionrelative:validationattributes\\maxyearattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,21 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\Programming\\ASP .NET\\TVShowCatalog\\Views\\TvShow\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\TvShow\\Create.cshtml",
-              "ToolTip": "D:\\Programming\\ASP .NET\\TVShowCatalog\\Views\\TvShow\\Create.cshtml",
-              "RelativeToolTip": "Views\\TvShow\\Create.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADQAAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-26T23:30:10.974Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
@@ -53,36 +36,35 @@
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
               "ToolTip": "D:\\Programming\\ASP .NET\\TVShowCatalog\\wwwroot\\css\\site.css",
               "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AgIAAIAAAAAAAAAAAAAcwJEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAAAKYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-08-26T23:13:11.741Z",
+              "WhenOpened": "2026-09-01T02:22:56.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TvShow.cs",
+              "DocumentMoniker": "D:\\Programming\\ASP .NET\\TVShowCatalog\\Models\\TvShow.cs",
+              "RelativeDocumentMoniker": "Models\\TvShow.cs",
+              "ToolTip": "D:\\Programming\\ASP .NET\\TVShowCatalog\\Models\\TvShow.cs",
+              "RelativeToolTip": "Models\\TvShow.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T02:17:33Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "TvShowController.cs",
-              "DocumentMoniker": "D:\\Programming\\ASP .NET\\TVShowCatalog\\Controllers\\TvShowController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TvShowController.cs",
-              "ToolTip": "D:\\Programming\\ASP .NET\\TVShowCatalog\\Controllers\\TvShowController.cs",
-              "RelativeToolTip": "Controllers\\TvShowController.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAUwGQAAAANAAAAAAAAAA==",
+              "Title": "MaxYearAttribute.cs",
+              "DocumentMoniker": "D:\\Programming\\ASP .NET\\TVShowCatalog\\ValidationAttributes\\MaxYearAttribute.cs",
+              "RelativeDocumentMoniker": "ValidationAttributes\\MaxYearAttribute.cs",
+              "ToolTip": "D:\\Programming\\ASP .NET\\TVShowCatalog\\ValidationAttributes\\MaxYearAttribute.cs",
+              "RelativeToolTip": "ValidationAttributes\\MaxYearAttribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-23T04:50:10.045Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\Programming\\ASP .NET\\TVShowCatalog\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "D:\\Programming\\ASP .NET\\TVShowCatalog\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-23T04:49:52.715Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-01T02:15:15.88Z"
             }
           ]
         }
