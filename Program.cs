@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TVShowCatalog.Models;
+using TVShowCatalog.Services.Extensions;
 
 namespace TVShowCatalog
 {
@@ -15,6 +16,8 @@ namespace TVShowCatalog
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddApplicationServices();
 
             var app = builder.Build();
 

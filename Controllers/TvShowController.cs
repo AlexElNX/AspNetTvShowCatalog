@@ -1,24 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using TVShowCatalog.Models;
+using TVShowCatalog.Services.Interfaces;
 
 namespace TVShowCatalog.Controllers
 {
     public class TvShowController : Controller
     {
-        private readonly TvShowContext _context;
-        private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly ITvShowService _tvShowService;
 
-        public TvShowController(TvShowContext context, IWebHostEnvironment webHostEnvironment)
+        public TvShowController(ITvShowService tvShowService)
         {
-            _context = context;
-            _webHostEnvironment = webHostEnvironment;
+            _tvShowService = tvShowService;
         }
 
         // GET: TvShows
         public async Task<IActionResult> Index()
         {
-            return View(await _context.TvShows.ToListAsync());
+            var shows = await _tvShowService.GetAllAsync();
+            return View(shows);
         }
 
 
@@ -27,8 +26,7 @@ namespace TVShowCatalog.Controllers
         {
             if (id == null) return NotFound();
 
-            var tvShow = await _context.TvShows
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var tvShow = await _tvShowService.GetByIdAsync(id.Value);
 
             if (tvShow == null) return NotFound();
 
@@ -48,27 +46,9 @@ namespace TVShowCatalog.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Title,Showrunner,Genre,Premiere,Poster,Description")] TvShow tvShow, IFormFile? posterFile)
         {
-            if (posterFile != null && posterFile.Length > 0)
-            {
-                string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images");
-                Directory.CreateDirectory(uploadsFolder);
-
-                string fileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(posterFile.FileName);
-                string filePath = Path.Combine(uploadsFolder, fileName);
-
-                using (var stream = new FileStream(filePath, FileMode.Create))
-                {
-                    await posterFile.CopyToAsync(stream);
-                }
-
-                tvShow.Poster = "/images/" + fileName;
-            }
-
-
             if (ModelState.IsValid)
             {
-                _context.Add(tvShow);
-                await _context.SaveChangesAsync();
+                await _tvShowService.CreateAsync(tvShow, posterFile);
                 return RedirectToAction(nameof(Index));
             }
             return View(tvShow);
@@ -80,7 +60,7 @@ namespace TVShowCatalog.Controllers
         {
             if (id == null) return NotFound();
 
-            var tvShow = await _context.TvShows.FindAsync(id);
+            var tvShow = await _tvShowService.GetByIdAsync(id.Value);
 
             if (tvShow == null) return NotFound();
 
@@ -96,43 +76,12 @@ namespace TVShowCatalog.Controllers
         {
             if (id != tvShow.Id) return NotFound();
 
-
-            if (posterFile != null && posterFile.Length > 0)
-            {
-                string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images");
-                Directory.CreateDirectory(uploadsFolder);
-
-                string fileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(posterFile.FileName);
-                string filePath = Path.Combine(uploadsFolder, fileName);
-
-                using (var stream = new FileStream(filePath, FileMode.Create))
-                {
-                    await posterFile.CopyToAsync(stream);
-                }
-
-                tvShow.Poster = "/images/" + fileName;
-            }
-
-
-
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(tvShow);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if(!TvShowExists(tvShow.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                bool success = await _tvShowService.UpdateAsync(tvShow, posterFile);
+                if (!success) return NotFound();
+
+
                 return RedirectToAction(nameof(Index));
             }
 
@@ -145,8 +94,7 @@ namespace TVShowCatalog.Controllers
         {
             if (id == null) return NotFound();
 
-            var tvShow = await _context.TvShows
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var tvShow = await _tvShowService.GetByIdAsync(id.Value);
             
             if (tvShow == null) return NotFound();
 
@@ -159,19 +107,8 @@ namespace TVShowCatalog.Controllers
 
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var tvShow = await _context.TvShows.FindAsync(id);
-            if(tvShow != null)
-            {
-                _context.TvShows.Remove(tvShow);
-                await _context.SaveChangesAsync();
-            }
-
+            await _tvShowService.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool TvShowExists(int id)
-        {
-            return _context.TvShows.Any(tv => tv.Id == id);
         }
     }
 }
