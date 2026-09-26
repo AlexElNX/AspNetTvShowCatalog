@@ -1,28 +1,28 @@
 using Microsoft.EntityFrameworkCore;
 using TVShowCatalog.Models;
-using TVShowCatalog.Services.Interfaces;
+using TVShowCatalog.Interfaces;
 
 namespace TVShowCatalog.Services
 {
     public class TvShowService : ITvShowService
     {
-        private readonly TvShowContext _context;
+        private readonly IRepository<TvShow> _repository;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public TvShowService(TvShowContext context, IWebHostEnvironment webHostEnvironment)
+        public TvShowService(IRepository<TvShow> repository, IWebHostEnvironment webHostEnvironment)
         {
-            _context = context;
+            _repository = repository;
             _webHostEnvironment = webHostEnvironment;
         }
 
         public async Task<IEnumerable<TvShow>> GetAllAsync()
         {
-            return await _context.TvShows.ToListAsync();
+            return await _repository.GetAllAsync();
         }
 
         public async Task<TvShow?> GetByIdAsync(int id)
         {
-            return await _context.TvShows.FirstOrDefaultAsync(m => m.Id == id);
+            return await _repository.GetByIdAsync(id);
         }
 
         public async Task CreateAsync(TvShow tvShow, IFormFile? posterFile)
@@ -32,36 +32,26 @@ namespace TVShowCatalog.Services
                 tvShow.Poster = await SavePosterAsync(posterFile);
             }
 
-            _context.Add(tvShow);
-            await _context.SaveChangesAsync();
+            await _repository.CreateAsync(tvShow);
         }
 
         public async Task<bool> UpdateAsync(TvShow tvShow, IFormFile? posterFile)
         {
+            var existingShow = _repository.GetByIdAsync(tvShow.Id);
+            if(existingShow == null) return false;
+
             if (posterFile != null && posterFile.Length > 0)
             {
                 tvShow.Poster = await SavePosterAsync(posterFile);
             }
 
-            try
-            {
-                _context.Update(tvShow);
-                await _context.SaveChangesAsync();
-                return true;
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!await _context.TvShows.AnyAsync(e => e.Id == tvShow.Id))
-                {
-                    return false;
-                }
-                throw;
-            }
+            await _repository.UpdateAsync(tvShow);
+            return true;
         }
 
         public async Task<bool> DeleteAsync(int id)
         {
-            var tvShow = await _context.TvShows.FindAsync(id);
+            var tvShow = await _repository.GetByIdAsync(id);
             if (tvShow == null) return false;
 
             if (!string.IsNullOrEmpty(tvShow.Poster))
@@ -73,8 +63,7 @@ namespace TVShowCatalog.Services
                 }
             }
 
-            _context.TvShows.Remove(tvShow);
-            await _context.SaveChangesAsync();
+            await _repository.DeleteAsync(id);
             return true;
         }
 

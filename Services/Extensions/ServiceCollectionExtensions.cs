@@ -1,4 +1,6 @@
-using TVShowCatalog.Services.Interfaces;
+using TVShowCatalog.Interfaces;
+using TVShowCatalog.Models;
+using TVShowCatalog.Repositories;
 
 namespace TVShowCatalog.Services.Extensions
 {
@@ -7,6 +9,8 @@ namespace TVShowCatalog.Services.Extensions
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
             services.AddScoped<ITvShowService, TvShowService>();
+            services.AddScoped<IRepository<TvShow>, TvShowRepository>();
+
             return services;
         }
     }

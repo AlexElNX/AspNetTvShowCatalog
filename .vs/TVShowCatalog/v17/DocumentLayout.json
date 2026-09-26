@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "D:\\Programming\\ASP .NET\\TVShowCatalog\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|d:\\programming\\asp .net\\tvshowcatalog\\services\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|solutionrelative:services\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|d:\\programming\\asp .net\\tvshowcatalog\\repositories\\tvshowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|solutionrelative:repositories\\tvshowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|d:\\programming\\asp .net\\tvshowcatalog\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|d:\\programming\\asp .net\\tvshowcatalog\\controllers\\tvshowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|solutionrelative:controllers\\tvshowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|d:\\programming\\asp .net\\tvshowcatalog\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|solutionrelative:interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|d:\\programming\\asp .net\\tvshowcatalog\\services\\tvshowservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|solutionrelative:services\\tvshowservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|d:\\programming\\asp .net\\tvshowcatalog\\interfaces\\itvshowservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F8D77EB-079C-44FF-8457-0888B34DB5F6}|TVShowCatalog.csproj|solutionrelative:interfaces\\itvshowservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,20 +41,98 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "TvShowController.cs",
               "DocumentMoniker": "D:\\Programming\\ASP .NET\\TVShowCatalog\\Controllers\\TvShowController.cs",
               "RelativeDocumentMoniker": "Controllers\\TvShowController.cs",
               "ToolTip": "D:\\Programming\\ASP .NET\\TVShowCatalog\\Controllers\\TvShowController.cs",
               "RelativeToolTip": "Controllers\\TvShowController.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAAwHIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-11T04:44:38.201Z",
+              "WhenOpened": "2026-09-26T04:01:04.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "D:\\Programming\\ASP .NET\\TVShowCatalog\\Services\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "Services\\Extensions\\ServiceCollectionExtensions.cs",
+              "ToolTip": "D:\\Programming\\ASP .NET\\TVShowCatalog\\Services\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "Services\\Extensions\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T03:58:57.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Programming\\ASP .NET\\TVShowCatalog\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Programming\\ASP .NET\\TVShowCatalog\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAUwBUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T03:58:28.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TvShowRepository.cs",
+              "DocumentMoniker": "D:\\Programming\\ASP .NET\\TVShowCatalog\\Repositories\\TvShowRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\TvShowRepository.cs",
+              "ToolTip": "D:\\Programming\\ASP .NET\\TVShowCatalog\\Repositories\\TvShowRepository.cs",
+              "RelativeToolTip": "Repositories\\TvShowRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T03:41:00.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TvShowService.cs",
+              "DocumentMoniker": "D:\\Programming\\ASP .NET\\TVShowCatalog\\Services\\TvShowService.cs",
+              "RelativeDocumentMoniker": "Services\\TvShowService.cs",
+              "ToolTip": "D:\\Programming\\ASP .NET\\TVShowCatalog\\Services\\TvShowService.cs",
+              "RelativeToolTip": "Services\\TvShowService.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAowEMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T03:00:07.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "D:\\Programming\\ASP .NET\\TVShowCatalog\\Interfaces\\IRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IRepository.cs",
+              "ToolTip": "D:\\Programming\\ASP .NET\\TVShowCatalog\\Interfaces\\IRepository.cs",
+              "RelativeToolTip": "Interfaces\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T03:16:58.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ITvShowService.cs",
+              "DocumentMoniker": "D:\\Programming\\ASP .NET\\TVShowCatalog\\Interfaces\\ITvShowService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\ITvShowService.cs",
+              "ToolTip": "D:\\Programming\\ASP .NET\\TVShowCatalog\\Interfaces\\ITvShowService.cs",
+              "RelativeToolTip": "Interfaces\\ITvShowService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T03:16:10.657Z",
               "EditorCaption": ""
             }
           ]

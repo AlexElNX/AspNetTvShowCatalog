@@ -1,6 +1,6 @@
 using TVShowCatalog.Models;
 
-namespace TVShowCatalog.Services.Interfaces
+namespace TVShowCatalog.Interfaces
 {
     public interface ITvShowService
     {
